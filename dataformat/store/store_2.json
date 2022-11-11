@@ -1,0 +1,21 @@
+{
+    "storeName": "MR.DIY",
+    "imagePath": "../assets/store/002.jpg",
+    "imageName": "002",
+    "logoPath": "../assets/logo/002.png",
+    "logoName": "002logo",
+    "promotions": [
+        {
+            "tittle": "ซื้อ FoodContainer แถม Bottle",
+            "description": "รับขวดน้ำลายปิ๊กอัพ ทันทีเมื่อซื้อ กล่องอาหารวิเศษของโดราเอม่อน",
+            "startDate": "2022-11-09  00:00:00",
+            "endDate": "2023-01-31 00:00:00"
+        },
+        {
+            "tittle": "รับคนละครึ่ง",
+            "description": "",
+            "startDate": "2022-11-09  00:00:00",
+            "endDate": "2022-12-31 00:00:00"
+        }
+    ]
+}

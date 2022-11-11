@@ -1,0 +1,23 @@
+{
+    "storeId": 11,
+    "products": [
+        {
+            "productName": "Brother Ink Cartridge",
+            "imagePath": "../assets/product/0031.jpg",
+            "imageName": "0031",
+            "price": 280
+        },
+        {
+            "productName": "Brother Ink Toner",
+            "imagePath": "../assets/product/0032.jpg",
+            "imageName": "0032",
+            "price": 2090
+        },
+        {
+            "productName": "Printer",
+            "imagePath": "../assets/product/0033.jpg",
+            "imageName": "0033",
+            "price": 8890
+        }
+    ]
+}

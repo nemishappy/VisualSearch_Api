@@ -1,0 +1,23 @@
+{
+    "storeId": 8,
+    "products": [
+        {
+            "productName": "Apple iPhone 14 Pro Max",
+            "imagePath": "../assets/product/0022.jpg",
+            "imageName": "0022",
+            "price": 44900
+        },
+        {
+            "productName": "Samsung Z Fold 4",
+            "imagePath": "../assets/product/0023.jpg",
+            "imageName": "0023",
+            "price": 59899
+        },
+        {
+            "productName": "TRUE IDBox",
+            "imagePath": "../assets/product/0024.jpg",
+            "imageName": "0024",
+            "price": 2490
+        }
+    ]
+}

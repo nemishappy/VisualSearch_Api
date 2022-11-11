@@ -1,0 +1,23 @@
+{
+    "storeId": 24,
+    "products": [
+        {
+            "productName": "Massage Twisted Ankle",
+            "imagePath": "../assets/product/0070.jpg",
+            "imageName": "0070",
+            "price": 200
+        },
+        {
+            "productName": "Massage Knee Ankle",
+            "imagePath": "../assets/product/0071.jpg",
+            "imageName": "0071",
+            "price": 300
+        },
+        {
+            "productName": "Massage Elbow",
+            "imagePath": "../assets/product/0072.jpg",
+            "imageName": "0066",
+            "price": 300
+        }
+    ]
+}

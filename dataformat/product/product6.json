@@ -1,0 +1,29 @@
+{
+    "storeId": 6,
+    "products": [
+        {
+            "productName": "Asus Notebook",
+            "imagePath": "../assets/product/0016.jpg",
+            "imageName": "0016",
+            "price": 21799
+        },
+        {
+            "productName": "Monitor",
+            "imagePath": "../assets/product/0017.jpg",
+            "imageName": "0017",
+            "price": 5999,
+            "promotion": {
+                "tittle": "ลด 20%",
+                "promotionPrice": 4799,
+                "startDate": "2022-11-09 00:00:00",
+                "endDate": "2022-11-20 00:00:00"
+            }
+        },
+        {
+            "productName": "Powerbank",
+            "imagePath": "../assets/product/0018.jpg",
+            "imageName": "0018",
+            "price": 399
+        }
+    ]
+}

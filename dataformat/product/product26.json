@@ -1,0 +1,23 @@
+{
+    "storeId": 26,
+    "products": [
+        {
+            "productName": "Macbook Pro 16 inch",
+            "imagePath": "../assets/product/0076.jpg",
+            "imageName": "0076",
+            "price": 89900
+        },
+        {
+            "productName": "Macbook Pro 13 inch",
+            "imagePath": "../assets/product/0077.jpg",
+            "imageName": "0077",
+            "price": 46900
+        },
+        {
+            "productName": "WD External HDD",
+            "imagePath": "../assets/product/0078.jpg",
+            "imageName": "0078",
+            "price": 1490
+        }
+    ]
+}

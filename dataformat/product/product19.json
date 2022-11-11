@@ -1,0 +1,29 @@
+{
+    "storeId": 19,
+    "products": [
+        {
+            "productName": "Table",
+            "imagePath": "../assets/product/0055.jpg",
+            "imageName": "0055",
+            "price": 1340,
+            "promotion": {
+                "tittle": "ลด 30%",
+                "promotionPrice": 938,
+                "startDate": "2022-11-09 00:00:00",
+                "endDate": "2023-01-10 00:00:00"
+            }
+        },
+        {
+            "productName": "Chair",
+            "imagePath": "../assets/product/0056.jpg",
+            "imageName": "0056",
+            "price": 199
+        },
+        {
+            "productName": "Bar Chair",
+            "imagePath": "../assets/product/0057.jpg",
+            "imageName": "0057",
+            "price": 370
+        }
+    ]
+}

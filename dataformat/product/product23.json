@@ -1,0 +1,23 @@
+{
+    "storeId": 23,
+    "products": [
+        {
+            "productName": "Doll",
+            "imagePath": "../assets/product/0067.jpg",
+            "imageName": "0067",
+            "price": 150
+        },
+        {
+            "productName": "Game Machine",
+            "imagePath": "../assets/product/0068.jpg",
+            "imageName": "0068",
+            "price": 10
+        },
+        {
+            "productName": "Coin Operated Games",
+            "imagePath": "../assets/product/0069.jpg",
+            "imageName": "0066",
+            "price": 10
+        }
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "storeId": 27,
+    "products": [
+        {
+            "productName": "Lan Cable",
+            "imagePath": "../assets/product/0082.jpg",
+            "imageName": "0082",
+            "price": 150
+        },
+        {
+            "productName": "TPLink PocketWifi",
+            "imagePath": "../assets/product/0083.jpg",
+            "imageName": "0083",
+            "price": 1890
+        },
+        {
+            "productName": "TPLink RangeExtender",
+            "imagePath": "../assets/product/0084.jpg",
+            "imageName": "0084",
+            "price": 1230
+        }
+    ]
+}

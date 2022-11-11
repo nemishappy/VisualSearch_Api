@@ -1,0 +1,23 @@
+{
+    "storeId": 14,
+    "products": [
+        {
+            "productName": "Power Cord",
+            "imagePath": "../assets/product/0040.jpg",
+            "imageName": "0040",
+            "price": 125
+        },
+        {
+            "productName": "Type C Cable",
+            "imagePath": "../assets/product/0041.jpg",
+            "imageName": "0041",
+            "price": 199
+        },
+        {
+            "productName": "Lightning Cable",
+            "imagePath": "../assets/product/0042.jpg",
+            "imageName": "0042",
+            "price": 70
+        }
+    ]
+}

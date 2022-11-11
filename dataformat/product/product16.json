@@ -1,0 +1,29 @@
+{
+    "storeId": 16,
+    "products": [
+        {
+            "productName": "Brother Ink Cartridge",
+            "imagePath": "../assets/product/0046.jpg",
+            "imageName": "0046",
+            "price": 230
+        },
+        {
+            "productName": "Brother Ink Toner",
+            "imagePath": "../assets/product/0047.jpg",
+            "imageName": "0047",
+            "price": 2490
+        },
+        {
+            "productName": "Printer",
+            "imagePath": "../assets/product/0048.jpg",
+            "imageName": "0048",
+            "price": 6990,
+            "promotion": {
+                "tittle": "ลด 10%",
+                "promotionPrice": 6290,
+                "startDate": "2022-11-09 00:00:00",
+                "endDate": "2023-01-10 00:00:00"
+            }
+        }
+    ]
+}

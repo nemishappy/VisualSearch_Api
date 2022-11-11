@@ -1,0 +1,23 @@
+{
+    "storeId": 22,
+    "products": [
+        {
+            "productName": "Sandisk Flash Drive",
+            "imagePath": "../assets/product/0064.jpg",
+            "imageName": "0064",
+            "price": 150
+        },
+        {
+            "productName": "Mouse",
+            "imagePath": "../assets/product/0065.jpg",
+            "imageName": "0065",
+            "price": 283
+        },
+        {
+            "productName": "Lan Cable",
+            "imagePath": "../assets/product/0066.jpg",
+            "imageName": "0066",
+            "price": 152
+        }
+    ]
+}

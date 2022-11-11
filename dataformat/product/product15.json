@@ -1,0 +1,29 @@
+{
+    "storeId": 15,
+    "products": [
+        {
+            "productName": "Sony CCTV",
+            "imagePath": "../assets/product/0043.jpg",
+            "imageName": "0043",
+            "price": 1799,
+            "promotion": {
+                "tittle": "ลด 50%",
+                "promotionPrice": 899,
+                "startDate": "2022-11-09 00:00:00",
+                "endDate": "2022-11-20 00:00:00"
+            }
+        },
+        {
+            "productName": "DaHua CCTV",
+            "imagePath": "../assets/product/0044.jpg",
+            "imageName": "0044",
+            "price": 490
+        },
+        {
+            "productName": "HiView CCTV",
+            "imagePath": "../assets/product/0045.jpg",
+            "imageName": "0045",
+            "price": 1200
+        }
+    ]
+}

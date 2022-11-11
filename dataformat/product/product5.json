@@ -1,0 +1,23 @@
+{
+    "storeId": 5,
+    "products": [
+        {
+            "productName": "Tablet Case",
+            "imagePath": "../assets/product/0013.jpg",
+            "imageName": "0013",
+            "price": 799
+        },
+        {
+            "productName": "Mobile Case",
+            "imagePath": "../assets/product/0014.jpg",
+            "imageName": "0014",
+            "price": 499
+        },
+        {
+            "productName": "Mobile Flim Protector",
+            "imagePath": "../assets/product/0015.jpg",
+            "imageName": "0015",
+            "price": 399
+        }
+    ]
+}

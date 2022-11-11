@@ -1,0 +1,23 @@
+{
+    "storeId": 17,
+    "products": [
+        {
+            "productName": "Iced Coffee",
+            "imagePath": "../assets/product/0049.jpg",
+            "imageName": "0049",
+            "price": 50
+        },
+        {
+            "productName": "Cake",
+            "imagePath": "../assets/product/0050.jpg",
+            "imageName": "0050",
+            "price": 69
+        },
+        {
+            "productName": "Bread",
+            "imagePath": "../assets/product/0051.jpg",
+            "imageName": "0051",
+            "price": 20
+        }
+    ]
+}

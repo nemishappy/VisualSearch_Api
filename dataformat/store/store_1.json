@@ -1,0 +1,21 @@
+{
+    "storeName": "Thank You",
+    "imagePath": "../assets/store/001.jpg",
+    "imageName": "001",
+    "logoPath": "../assets/logo/001.png",
+    "logoName": "001logo",
+    "promotions": [
+        {
+            "tittle": "ซื้อครบ 500 แถมน้ำใจ",
+            "description": "รับน้ำสิงค์ฟรี",
+            "startDate": "2022-11-09 00:00:00",
+            "endDate": "2022-11-20 00:00:00"
+        },
+        {
+            "tittle": "ซื้อครบ 1000 แถมน้ำดื่ม",
+            "description": "รับน้ำอีเวียงจากเทือกเขาอัลไต",
+            "startDate": "2022-11-09 00:00:00",
+            "endDate": "2022-11-20 00:00:00"
+        }
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "storeId": 4,
+    "products": [
+        {
+            "productName": "Book Bank",
+            "imagePath": "../assets/product/0010.jpg",
+            "imageName": "0010",
+            "price": 100
+        },
+        {
+            "productName": "Bank Note",
+            "imagePath": "../assets/product/0011.jpg",
+            "imageName": "0011",
+            "price": 0
+        },
+        {
+            "productName": "Coins",
+            "imagePath": "../assets/product/0012.jpg",
+            "imageName": "0012",
+            "price": 10
+        }
+    ]
+}

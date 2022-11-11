@@ -1,0 +1,23 @@
+{
+    "storeId": 18,
+    "products": [
+        {
+            "productName": "Power Cord",
+            "imagePath": "../assets/product/0052.jpg",
+            "imageName": "0052",
+            "price": 50
+        },
+        {
+            "productName": "Micro USB Cable",
+            "imagePath": "../assets/product/0053.jpg",
+            "imageName": "0053",
+            "price": 199
+        },
+        {
+            "productName": "Type C Cable",
+            "imagePath": "../assets/product/0054.jpg",
+            "imageName": "0054",
+            "price": 370
+        }
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "storeId": 12,
+    "products": [
+        {
+            "productName": "Earpods HeadPhone",
+            "imagePath": "../assets/product/0034.jpg",
+            "imageName": "0034",
+            "price": 280
+        },
+        {
+            "productName": "Powerbank",
+            "imagePath": "../assets/product/0035.jpg",
+            "imageName": "0035",
+            "price": 799
+        },
+        {
+            "productName": "Speaker",
+            "imagePath": "../assets/product/0036.jpg",
+            "imageName": "0036",
+            "price": 200
+        }
+    ]
+}

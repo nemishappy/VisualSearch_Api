@@ -1,0 +1,23 @@
+{
+    "storeId": 21,
+    "products": [
+        {
+            "productName": "Windows 10 Pro",
+            "imagePath": "../assets/product/0061.jpg",
+            "imageName": "0061",
+            "price": 1790
+        },
+        {
+            "productName": "Microsoft office 365",
+            "imagePath": "../assets/product/0062.jpg",
+            "imageName": "0062",
+            "price": 1350
+        },
+        {
+            "productName": "RAM DDR3",
+            "imagePath": "../assets/product/0063.jpg",
+            "imageName": "0063",
+            "price": 1300
+        }
+    ]
+}

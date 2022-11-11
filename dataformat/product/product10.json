@@ -1,0 +1,23 @@
+{
+    "storeId": 10,
+    "products": [
+        {
+            "productName": "iPhone 13 mini",
+            "imagePath": "../assets/product/0028.jpg",
+            "imageName": "0028",
+            "price": 24900
+        },
+        {
+            "productName": "Mobile Case",
+            "imagePath": "../assets/product/0029.jpg",
+            "imageName": "0029",
+            "price": 69
+        },
+        {
+            "productName": "Mobile Flim Protector",
+            "imagePath": "../assets/product/0030.jpg",
+            "imageName": "0030",
+            "price": 300
+        }
+    ]
+}

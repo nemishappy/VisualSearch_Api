@@ -1,0 +1,35 @@
+{
+    "storeId": 1,
+    "products": [
+        {
+            "productName": "Cutter",
+            "imagePath": "../assets/product/0001.jpg",
+            "imageName": "0001",
+            "price": 20,
+            "promotion": {
+                "tittle": "ลด 20%",
+                "promotionPrice": 16,
+                "startDate": "2022-11-09 00:00:00",
+                "endDate": "2022-11-20 00:00:00"
+            }
+        },
+        {
+            "productName": "Tissue",
+            "imagePath": "../assets/product/0002.jpg",
+            "imageName": "0002",
+            "price": 10
+        },
+        {
+            "productName": "Fan",
+            "imagePath": "../assets/product/0003.jpg",
+            "imageName": "0003",
+            "price": 569,
+            "promotion": {
+                "tittle": "ลด 10%",
+                "promotionPrice": 512,
+                "startDate": "2022-11-09 00:00:00",
+                "endDate": "2022-11-20 00:00:00"
+            }
+        }
+    ]
+}

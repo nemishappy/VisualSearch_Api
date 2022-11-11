@@ -1,0 +1,23 @@
+{
+    "storeId": 9,
+    "products": [
+        {
+            "productName": "iPhone 14 Pro Max",
+            "imagePath": "../assets/product/0025.jpg",
+            "imageName": "0025",
+            "price": 44900
+        },
+        {
+            "productName": "Samsung Z Fold 4",
+            "imagePath": "../assets/product/0026.jpg",
+            "imageName": "0026",
+            "price": 59899
+        },
+        {
+            "productName": "iPad Pro 11",
+            "imagePath": "../assets/product/0027.jpg",
+            "imageName": "0027",
+            "price": 32900
+        }
+    ]
+}

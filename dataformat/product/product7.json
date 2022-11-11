@@ -1,0 +1,29 @@
+{
+    "storeId": 7,
+    "products": [
+        {
+            "productName": "TPLink PocketWifi",
+            "imagePath": "../assets/product/0019.jpg",
+            "imageName": "0019",
+            "price": 1890,
+            "promotion": {
+                "tittle": "ลด 10%",
+                "promotionPrice": 1700,
+                "startDate": "2022-11-09 00:00:00",
+                "endDate": "2022-11-20 00:00:00"
+            }
+        },
+        {
+            "productName": "TPLink RangeExtender",
+            "imagePath": "../assets/product/0020.jpg",
+            "imageName": "0020",
+            "price": 1230
+        },
+        {
+            "productName": "Monitor",
+            "imagePath": "../assets/product/0021.jpg",
+            "imageName": "0021",
+            "price": 3999
+        }
+    ]
+}

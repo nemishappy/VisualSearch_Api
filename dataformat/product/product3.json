@@ -1,0 +1,23 @@
+{
+    "storeId": 3,
+    "products": [
+        {
+            "productName": "HandCream",
+            "imagePath": "../assets/product/0007.jpg",
+            "imageName": "0007",
+            "price": 50
+        },
+        {
+            "productName": "Pimple Blackhead Remover",
+            "imagePath": "../assets/product/0008.jpg",
+            "imageName": "0008",
+            "price": 30
+        },
+        {
+            "productName": "Mask",
+            "imagePath": "../assets/product/0009.jpg",
+            "imageName": "0009",
+            "price": 69
+        }
+    ]
+}

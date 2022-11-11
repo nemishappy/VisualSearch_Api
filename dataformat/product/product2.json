@@ -1,0 +1,23 @@
+{
+    "storeId": 2,
+    "products": [
+        {
+            "productName": "Scissors",
+            "imagePath": "../assets/product/0004.jpg",
+            "imageName": "0004",
+            "price": 20
+        },
+        {
+            "productName": "FoodContainer",
+            "imagePath": "../assets/product/0005.jpg",
+            "imageName": "0005",
+            "price": 30
+        },
+        {
+            "productName": "Bottle",
+            "imagePath": "../assets/product/0006.jpg",
+            "imageName": "0006",
+            "price": 17
+        }
+    ]
+}
