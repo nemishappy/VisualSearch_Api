@@ -1,0 +1,51 @@
+[
+    {
+        "storeName": "Thank You",
+        "imagePath": "../assets/store/001.jpg",
+        "imageName": "001",
+        "logoPath": "../assets/logo/001.png",
+        "logoName": "001logo",
+        "promotions": [
+            {
+                "tittle": "ซื้อครบ 500 แถมน้ำใจ",
+                "description": "รับน้ำสิงค์ฟรี",
+                "startDate": "2022-11-09 00:00:00",
+                "endDate": "2022-11-20 00:00:00"
+            },
+            {
+                "tittle": "ซื้อครบ 1000 แถมน้ำดื่ม",
+                "description": "รับน้ำอีเวียงจากเทือกเขาอัลไต",
+                "startDate": "2022-11-09 00:00:00",
+                "endDate": "2022-11-20 00:00:00"
+            }
+        ]
+    },
+    {
+        "storeName": "MR.DIY",
+        "imagePath": "../assets/store/002.jpg",
+        "imageName": "002",
+        "logoPath": "../assets/logo/002.png",
+        "logoName": "002logo",
+        "promotions": [
+            {
+                "tittle": "ซื้อ FoodContainer แถม Bottle",
+                "description": "รับขวดน้ำลายปิ๊กอัพ ทันทีเมื่อซื้อ กล่องอาหารวิเศษของโดราเอม่อน",
+                "startDate": "2022-11-09  00:00:00",
+                "endDate": "2023-01-31 00:00:00"
+            },
+            {
+                "tittle": "รับคนละครึ่ง",
+                "description": "",
+                "startDate": "2022-11-09  00:00:00",
+                "endDate": "2022-12-31 00:00:00"
+            }
+        ]
+    },
+    {
+        "storeName": "Zakin Master",
+        "imagePath": "../assets/store/003.jpg",
+        "imageName": "003",
+        "logoPath": "../assets/logo/003.png",
+        "logoName": "003logo"
+    }
+]
