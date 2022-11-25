@@ -51,7 +51,7 @@ async function Products(router, sequelizeObjects) {
               console.log(err.name);
               insertComplete = false;
             });
-          if (product.promotion) {
+          if (insertComplete && product.promotion) {
             var startDate = new Date(
               product.promotion.startDate
             ).toLocaleString();

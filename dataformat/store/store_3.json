@@ -1,7 +1,22 @@
 {
+    "storeId": 3,
     "storeName": "Zakin Master",
     "imagePath": "../assets/store/003.jpg",
     "imageName": "003",
     "logoPath": "../assets/logo/003.png",
-    "logoName": "003logo"
+    "logoName": "003logo",
+    "promotions": [
+        {
+            "tittle": "Diode Laser แถมคอร์สเสริมความงาม",
+            "description": "รับคอร์สเสริมความงามจาก Zakin Master clinic มูลค่า 2,000 ฟรี",
+            "startDate": "2022-11-09 00:00:00",
+            "endDate": "2022-11-20 00:00:00"
+        },
+        {
+            "tittle": "ซื้อครบ 10,000 แถมคอร์สเสริมความงาม",
+            "description": "รับคอร์ส Laser ผิวเรียบจาก Zakin Master clinic มูลค่า 5,000 ฟรี",
+            "startDate": "2022-11-09 00:00:00",
+            "endDate": "2022-11-20 00:00:00"
+        }
+    ]
 }

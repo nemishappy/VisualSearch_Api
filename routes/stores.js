@@ -6,6 +6,7 @@ dotEnv.config();
 
 function _validStore(store) {
   var validataion = [
+    "storeId",
     "storeName",
     "imagePath",
     "imageName",
@@ -35,6 +36,7 @@ async function Stores(router, sequelizeObjects) {
     if (!missing.length) {
       // Insert store data
       await sequelizeObjects.Store.create({
+        id: data.storeId,
         storeName: data.storeName,
         imagePath: data.imagePath,
         imageName: data.imageName,
@@ -54,7 +56,7 @@ async function Stores(router, sequelizeObjects) {
     }
 
     // Insert promotion of store
-    if (data.promotions) {
+    if (insertComplete && data.promotions) {
       for (const item of data.promotions) {
         var startDate = new Date(item.startDate).toLocaleString();
         var endDate = new Date(item.endDate).toLocaleString();

@@ -1,7 +1,28 @@
 {
+    "storeId": 17,
     "storeName": "mezzo",
     "imagePath": "../assets/store/017.jpg",
     "imageName": "017",
     "logoPath": "../assets/logo/017.png",
-    "logoName": "017logo"
+    "logoName": "017logo",
+    "promotion": [
+        {
+            "tittle": "คอมโบ 99B",
+            "description": "Iced Latte (ขนาดใหญ่) แถมฟรี บราวนี่หรือบัตเตอร์เค้ก 1 ชิ้น (เลือกรสชาติได้)",
+            "startDate": "2022-11-09 00:00:00",
+            "endDate": "2023-01-20 00:00:00"
+        },
+        {
+            "tittle": "Mezzo Rewards",
+            "description": "สมัครสมาชิกกับ Mezzo ฟรีไม่ต้องใช้บัตร พร้อมรับสิทธิประโยชน์มากมาย",
+            "startDate": "2022-11-09 00:00:00",
+            "endDate": "2022-12-31 00:00:00"
+        },
+        {
+            "tittle": "3 Free 1",
+            "description": "เมื่อซื้อเครื่องดื่มหรือเบเกอรี่ ครบ 3 ชิ้น ฟรี 1 ชิ้น",
+            "startDate": "2022-11-09 00:00:00",
+            "endDate": "2022-12-31 00:00:00"
+        }
+    ]
 }

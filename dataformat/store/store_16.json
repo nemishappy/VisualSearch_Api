@@ -1,5 +1,6 @@
 {
-    "storeName": "K.P. Advance",
+    "storeId": 16,
+    "storeName": "24 INK",
     "imagePath": "../assets/store/016.jpg",
     "imageName": "016",
     "logoPath": "../assets/logo/016.png",

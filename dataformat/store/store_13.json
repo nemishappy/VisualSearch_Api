@@ -1,7 +1,16 @@
 {
+    "storeId": 13,
     "storeName": "Ink Save",
     "imagePath": "../assets/store/013.jpg",
     "imageName": "013",
     "logoPath": "../assets/logo/013.png",
-    "logoName": "013logo"
+    "logoName": "013logo",
+    "promotions": [
+        {
+            "tittle": "ฟรีประกันร้าน 1 ปี",
+            "description": "เมื่อซื้อ Printer กับร้านค้า",
+            "startDate": "2022-11-09 00:00:00",
+            "endDate": "2023-01-20 00:00:00"
+        }
+    ]
 }

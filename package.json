@@ -24,9 +24,13 @@
     "helmet": "4.6.0",
     "image-thumbnail": "1.0.14",
     "moment": "2.29.1",
+    "nanoid": "^3.3.4",
     "node-schedule": "2.1.0",
     "nodemailer": "6.7.2",
     "nodemon": "^2.0.20",
-    "os-utils": "0.0.14"
+    "os-utils": "0.0.14",
+    "pg": "8.7.1",
+    "pgtools": "0.3.2",
+    "sequelize": "6.11.0"
   }
 }

@@ -1,7 +1,17 @@
 {
+    "storeId": 28,
     "storeName": "Hor IT",
     "imagePath": "../assets/store/028.jpg",
     "imageName": "028",
     "logoPath": "../assets/logo/028.png",
-    "logoName": "028logo"
+    "logoName": "028logo",
+    "promotions": [
+        {
+            "tittle": "ฟรี Flash Drive",
+            "description": "เมื่อซื้อสินค้าครบ 500 บาทขึ้นไป",
+            "startDate": "2022-11-09 00:00:00",
+            "endDate": "2023-01-20 00:00:00"
+        }
+    ]
+    
 }
