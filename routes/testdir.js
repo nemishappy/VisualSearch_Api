@@ -45,6 +45,19 @@ function syncReadFile(filename) {
   return arr;
 }
 
+async function getStore(id, sequelizeObjects) {
+  const store = await sequelizeObjects.Store.findByPk(id, {
+    attributes: ['id', 'storeName'],
+  });
+  if (store === null) {
+    console.log("Not found!");
+    return false;
+  } else {
+    console.log(store instanceof sequelizeObjects.Store); // true
+    return store;
+  }
+}
+
 async function searchProduct(query, sequelizeObjects) {
   let outputs = [];
   // Find product by string
@@ -54,8 +67,8 @@ async function searchProduct(query, sequelizeObjects) {
     limit: 10,
     where: {
       productName: Sequelize.where(Sequelize.fn('LOWER', Sequelize.fn('REPLACE', Sequelize.col('productName'), ' ', '')), 'LIKE', '%' + lookupValue + '%')
-
-    }
+    },
+    include: [sequelizeObjects.PromoProduct, { model: sequelizeObjects.Store, attributes: ['storeName'] }]
   }).then(function (results) {
     outputs = results;
   }).catch(function (error) {
@@ -88,6 +101,7 @@ async function TestAPI(router, sequelizeObjects) {
     if (!base64 || !fs.existsSync(dir)) {
       return res.status(400).json('bad request');
     }
+
     const fileName = nanoid();
     var filepath = base64Img.imgSync(base64, dir, fileName);
     // let pathArr = filepath.split("/");
@@ -99,29 +113,60 @@ async function TestAPI(router, sequelizeObjects) {
     //   console.log('Successfully renamed - AKA moved!')
     // })
 
-    sleepUntil(() => fs.existsSync(processed_path), 10000)
+    sleepUntil(() => fs.existsSync(processed_path), 20000)
       .then(async () => {
         console.log("found result!");
-        const result = syncReadFile(processed_path)
+        const results = syncReadFile(processed_path);
 
-        const id = Number(result[0].split(",", 1));
         if (type == 'store') {
+          const id = Number(results[0].split(",", 1));
           const store = storeLabel[id];
           console.log(store.storeId);
+          const output = await getStore(store.storeId, sequelizeObjects)
 
-          res.status(200).json({
-            success: true,
-            result: store.storeId,
-          });
+          if (output) {
+            res.status(200).json({
+              success: true,
+              result: output,
+            });
+          } else {
+            res.status(200).json({
+              success: false,
+              result: output,
+            });
+          }
         } else if (type == 'product') {
-          const label = productLabel[id];
-          console.log(label);
-          const results = await searchProduct(label, sequelizeObjects)
+          const outputs = [];
+          const tmpLabel = [];
+          const labels = [];
+          for (const result of results) {
+            const id = Number(result.split(",", 1));
+            const found = tmpLabel.find(element => element === id);
+            if (found) { continue; }
+            tmpLabel.push(id)
+            const label = productLabel[id];
+            console.log(label);
+            labels.push(label);
+            const products = await searchProduct(label, sequelizeObjects)
+            for (const product of products) {
+              outputs.push(product);
+            }
+          }
 
-          res.status(200).json({
-            success: true,
-            result: results,
-          });
+          if (outputs.length > 0) {
+            res.status(200).json({
+              success: true,
+              results: outputs,
+              labels: labels,
+            });
+          } else {
+            res.status(200).json({
+              success: false,
+              results: outputs,
+              labels: labels,
+            });
+          }
+
         }
       })
       .catch(() => {

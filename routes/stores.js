@@ -222,8 +222,6 @@ async function Stores(router, sequelizeObjects) {
         include: sequelizeObjects.PromoProduct
       }],
       order: [
-        // ... we replicate the include chain of interest
-        // at the beginning of the order array
         [sequelizeObjects.Product, 'price', 'ASC']
       ]
     });

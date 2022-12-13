@@ -223,13 +223,17 @@ async function Products(router, sequelizeObjects) {
   router.get("/product/search", async (req, res) => {
     // Find product by string
     const Sequelize = sequelizeObjects.sequelize;
-    let lookupValue = req.body.query.toLowerCase();
+    const query = req.query.query;
+    let lookupValue = query.toLowerCase();
     const product = await sequelizeObjects.Product.findAll({
       limit: 10,
       where: {
         productName: Sequelize.where(Sequelize.fn('LOWER', Sequelize.fn('REPLACE', Sequelize.col('productName'), ' ', '')), 'LIKE', '%' + lookupValue + '%')
-
-      }
+      },
+      include: [sequelizeObjects.PromoProduct, { model: sequelizeObjects.Store, attributes: ['storeName'] }],
+      order: [
+        ['price', 'ASC']
+      ]
     }).then(function (results) {
       return res.status(200).json({
         msg: 'search results',
