@@ -3,19 +3,19 @@
     "products": [
         {
             "productName": "Brother Ink Cartridge",
-            "imagePath": "../assets/product/0031.jpg",
+            "imagePath": "https://firebasestorage.googleapis.com/v0/b/sahakit-project.appspot.com/o/product%2FBrother_InkCartridge.jpeg?alt=media&token=16cef0ca-cce5-4659-a99c-56213bfbce66",
             "imageName": "0031",
             "price": 280
         },
         {
             "productName": "Brother Ink Toner",
-            "imagePath": "../assets/product/0032.jpg",
+            "imagePath": "https://firebasestorage.googleapis.com/v0/b/sahakit-project.appspot.com/o/product%2FBrother_Toner_1.webp?alt=media&token=ede1fe89-71e5-4b7f-878a-e4df55edc104",
             "imageName": "0032",
             "price": 2090
         },
         {
             "productName": "Printer",
-            "imagePath": "../assets/product/0033.jpg",
+            "imagePath": "https://firebasestorage.googleapis.com/v0/b/sahakit-project.appspot.com/o/product%2FPrinter_1.webp?alt=media&token=b75d88e9-1914-40a3-9e7b-bf34a8dd4be2",
             "imageName": "0033",
             "price": 8890
         }

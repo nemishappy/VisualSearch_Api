@@ -3,19 +3,19 @@
     "products": [
         {
             "productName": "iPhone 13 mini",
-            "imagePath": "../assets/product/0028.jpg",
+            "imagePath": "https://firebasestorage.googleapis.com/v0/b/sahakit-project.appspot.com/o/product%2FiPhone_13mini.jpg?alt=media&token=45a39a31-4455-4861-85d7-3248f3c98415",
             "imageName": "0028",
             "price": 24900
         },
         {
             "productName": "Mobile Case",
-            "imagePath": "../assets/product/0029.jpg",
+            "imagePath": "https://firebasestorage.googleapis.com/v0/b/sahakit-project.appspot.com/o/product%2FMobile_Case.webp?alt=media&token=65101f86-5b0a-4b02-a0a3-627a254d7a92",
             "imageName": "0029",
             "price": 69
         },
         {
-            "productName": "Mobile Flim Protector",
-            "imagePath": "../assets/product/0030.jpg",
+            "productName": "Mobile Film Protector",
+            "imagePath": "https://firebasestorage.googleapis.com/v0/b/sahakit-project.appspot.com/o/product%2FMobile_FlimProtector.jpeg?alt=media&token=f4d7e7d7-623e-4631-932b-c7e54a116ea0",
             "imageName": "0030",
             "price": 300
         }

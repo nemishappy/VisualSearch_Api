@@ -3,19 +3,19 @@
     "products": [
         {
             "productName": "Macbook Pro 16 inch",
-            "imagePath": "../assets/product/0076.jpg",
+            "imagePath": "https://firebasestorage.googleapis.com/v0/b/sahakit-project.appspot.com/o/product%2FMacbookPro_16inch.jpeg?alt=media&token=2651f2d9-485e-4d9c-8820-a0a467964d22",
             "imageName": "0076",
             "price": 89900
         },
         {
             "productName": "Macbook Pro 13 inch",
-            "imagePath": "../assets/product/0077.jpg",
+            "imagePath": "https://firebasestorage.googleapis.com/v0/b/sahakit-project.appspot.com/o/product%2FMacbookPro_13inch.jpeg?alt=media&token=bc3a6e13-e96d-4a38-86cb-63e13b5fa6f3",
             "imageName": "0077",
             "price": 46900
         },
         {
             "productName": "WD External HDD",
-            "imagePath": "../assets/product/0078.jpg",
+            "imagePath": "https://firebasestorage.googleapis.com/v0/b/sahakit-project.appspot.com/o/product%2FWD_ExternalHDD.jpg?alt=media&token=b0a58a7c-94e1-420f-b5b6-181c79366838",
             "imageName": "0078",
             "price": 1490
         }

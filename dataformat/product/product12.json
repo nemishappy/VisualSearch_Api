@@ -3,19 +3,19 @@
     "products": [
         {
             "productName": "Earpods HeadPhone",
-            "imagePath": "../assets/product/0034.jpg",
+            "imagePath": "https://firebasestorage.googleapis.com/v0/b/sahakit-project.appspot.com/o/product%2FEarpods_HeadPhone.jpeg?alt=media&token=cb2db5e5-6c83-401e-84c0-dfa1d674ea1b",
             "imageName": "0034",
             "price": 280
         },
         {
             "productName": "Powerbank",
-            "imagePath": "../assets/product/0035.jpg",
+            "imagePath": "https://firebasestorage.googleapis.com/v0/b/sahakit-project.appspot.com/o/product%2FPowerbank_2.jpg?alt=media&token=a57e90cf-c13e-47bd-af6b-5f5eb44c8f11",
             "imageName": "0035",
             "price": 799
         },
         {
             "productName": "Speaker",
-            "imagePath": "../assets/product/0036.jpg",
+            "imagePath": "https://firebasestorage.googleapis.com/v0/b/sahakit-project.appspot.com/o/product%2FSpeaker.webp?alt=media&token=4a3b8389-62cc-46ee-8016-1f303b279cbd",
             "imageName": "0036",
             "price": 200
         }

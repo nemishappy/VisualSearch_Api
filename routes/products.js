@@ -2,6 +2,7 @@
 const imageUtils = require("../module/imageUtils");
 const path = require("path");
 const dotEnv = require("dotenv");
+const { Op } = require('sequelize');
 dotEnv.config();
 
 function _validProduct(product) {
@@ -135,6 +136,45 @@ async function Products(router, sequelizeObjects) {
     }
   });
 
+  // update prodcut by id
+  router.patch("/product/update", async (req, res) => {
+    let insertComplete = false;
+    const data = req.body;
+    const id = req.query.id;
+    console.log(data);
+
+    // Check prodcut id
+    if (id) {
+      // update prodcut
+      await sequelizeObjects.Product.update({
+        productName: data.productName,
+      }, { where: { id: id } })
+        .then(function (product) {
+          insertComplete = true;
+          console.log("update records id: ", product.id);
+        })
+        .catch(function (err) {
+          // handle error
+          console.log(err.name);
+          insertComplete = false;
+          return;
+        });
+    }
+
+    // Response
+    if (insertComplete) {
+      res.status(200).json({
+        success: true,
+        message: `product ${id} has been updated.`,
+      });
+    } else {
+      res.status(400).json({
+        success: false,
+        message: `Fail to update to the database.`,
+      });
+    }
+  });
+
   // Queries all product
   router.get("/product/getall", async (req, res) => {
     let outputs = [];
@@ -180,6 +220,26 @@ async function Products(router, sequelizeObjects) {
       res.status(200).json(product);
     }
   });
+  router.get("/product/search", async (req, res) => {
+    // Find product by string
+    const Sequelize = sequelizeObjects.sequelize;
+    let lookupValue = req.body.query.toLowerCase();
+    const product = await sequelizeObjects.Product.findAll({
+      limit: 10,
+      where: {
+        productName: Sequelize.where(Sequelize.fn('LOWER', Sequelize.fn('REPLACE', Sequelize.col('productName'), ' ', '')), 'LIKE', '%' + lookupValue + '%')
+
+      }
+    }).then(function (results) {
+      return res.status(200).json({
+        msg: 'search results',
+        results: results
+      });
+    }).catch(function (error) {
+      console.log(error);
+    });
+  });
+
 }
 
 exports.Products = Products;

@@ -3,19 +3,19 @@
     "products": [
         {
             "productName": "Apple iPhone 14 Pro Max",
-            "imagePath": "../assets/product/0022.jpg",
+            "imagePath": "https://firebasestorage.googleapis.com/v0/b/sahakit-project.appspot.com/o/product%2FiPhone_14ProMax.jpg?alt=media&token=74245557-954e-43d2-bc1f-bb145c29a1a6",
             "imageName": "0022",
             "price": 44900
         },
         {
             "productName": "Samsung Z Fold 4",
-            "imagePath": "../assets/product/0023.jpg",
+            "imagePath": "https://firebasestorage.googleapis.com/v0/b/sahakit-project.appspot.com/o/product%2FZFold4.webp?alt=media&token=0f186461-0b7f-42c8-bc12-fc69412b422f",
             "imageName": "0023",
             "price": 59899
         },
         {
             "productName": "TRUE IDBox",
-            "imagePath": "../assets/product/0024.jpg",
+            "imagePath": "https://firebasestorage.googleapis.com/v0/b/sahakit-project.appspot.com/o/product%2FTRUEIDBox.png?alt=media&token=e4a7d50b-9d74-4d9f-8a5f-d0a60141f6d6",
             "imageName": "0024",
             "price": 2490
         }

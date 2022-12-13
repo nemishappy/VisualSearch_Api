@@ -3,19 +3,19 @@
     "products": [
         {
             "productName": "Power Cord",
-            "imagePath": "../assets/product/0052.jpg",
+            "imagePath": "https://firebasestorage.googleapis.com/v0/b/sahakit-project.appspot.com/o/product%2FPowerCod_2.webp?alt=media&token=2a9b46e5-51fe-468e-8e58-5985b849d1f0",
             "imageName": "0052",
             "price": 50
         },
         {
             "productName": "Micro USB Cable",
-            "imagePath": "../assets/product/0053.jpg",
+            "imagePath": "https://firebasestorage.googleapis.com/v0/b/sahakit-project.appspot.com/o/product%2FMicroUSB_Cable.jpg?alt=media&token=3a84a614-dae9-4605-a917-7326962ea073",
             "imageName": "0053",
             "price": 199
         },
         {
             "productName": "Type C Cable",
-            "imagePath": "../assets/product/0054.jpg",
+            "imagePath": "https://firebasestorage.googleapis.com/v0/b/sahakit-project.appspot.com/o/product%2FTypeC_Cable_2.webp?alt=media&token=3dc245c8-b316-4663-8741-6a6d089f2fb1",
             "imageName": "0054",
             "price": 370
         }

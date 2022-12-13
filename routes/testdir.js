@@ -1,10 +1,11 @@
 "use strict";
+const fs = require('fs')
 const base64Img = require("base64-img");
 const { spawn } = require("child_process");
-const { customAlphabet } = require("nanoid");
-const alphabet =
-  "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-const nanoid = customAlphabet(alphabet, 10);
+const { nanoid } = require("nanoid");
+
+let storeLabel = require('../assets/classes/store.json');
+let productLabel = require('../assets/classes/product.json');
 
 function waitFor(conditionFunction) {
   const poll = (resolve) => {
@@ -33,81 +34,101 @@ const sleepUntil = async (f, timeoutMs) => {
   });
 };
 
-async function TestAPI(router) {
-  // router.get("/get/test", async (req, res) => {
-  //   console.log("get test");
-  //   console.log(__dirname);
-  //   var dataToSend;
-  //   // spawn new child process to call the python script
-  //   const python = spawn("python", ["models/script.py"]);
-  //   // collect data from script
-  //   python.stdout.on("data", function (data) {
-  //     console.log("Pipe data from python script ...");
-  //     dataToSend = data.toString();
-  //   });
-  //   // in close event we are sure that stream from child process is closed
-  //   python.on("close", (code) => {
-  //     console.log(`child process close all stdio with code ${code}`);
-  //     // send data to browser
-  //     res.send(dataToSend);
-  //   });
-  //   // res.json({ id: 3 });
-  // });
+function syncReadFile(filename) {
+  const contents = fs.readFileSync(filename, 'utf-8');
 
-  
-  router.post("/post/test", async (req, res) => {
-    const { image } = req.body;
-    // console.log(image);
-    const fileName = nanoid() + "_" + Date.now();
-    let filePath = "";
-    base64Img.img(image, "./img", fileName, function (err, filepath) {
-      filePath = filepath;
+  const arr = contents.split(/\r?\n/);
+
+  arr.pop()
+  console.log(arr);
+
+  return arr;
+}
+
+async function searchProduct(query, sequelizeObjects) {
+  let outputs = [];
+  // Find product by string
+  const Sequelize = sequelizeObjects.sequelize;
+  let lookupValue = query.toLowerCase();
+  await sequelizeObjects.Product.findAll({
+    limit: 10,
+    where: {
+      productName: Sequelize.where(Sequelize.fn('LOWER', Sequelize.fn('REPLACE', Sequelize.col('productName'), ' ', '')), 'LIKE', '%' + lookupValue + '%')
+
+    }
+  }).then(function (results) {
+    outputs = results;
+  }).catch(function (error) {
+    console.log(error);
+  });
+  // console.log(outputs);
+  return outputs;
+}
+
+
+async function TestAPI(router, sequelizeObjects) {
+  router.get("/get/test", async (req, res) => {
+    console.log("get test");
+    let processed_path = `../python/processed/store/${'pUqSfCNUbi' + '.txt'}`;
+    // let rawdata = fs.readFileSync('./assets/classes/store.json');
+    const result = syncReadFile(processed_path);
+    const id = Number(result[0].split(",", 1));
+    const store = storeLabel[id];
+    console.log(store.storeId);
+    res.status(200).json({
+      message: 'Server OK.',
     });
-    let flag = false;
+  });
 
-    // waitFor((_) => flag === true).then((_) => {
-    //   console.log("the wait is over!");
-    //   res.status(200).json({
-    //     success: true,
-    //     fileName: `${fileName}`,
-    //   });
-    // });
 
-    sleepUntil(() => flag === true, 5000)
-      .then(() => {
-        console.log("the wait is over!");
-        res.status(200).json({
-          success: true,
-          fileName: `${fileName}`,
-        });
+  router.post("/post/test", async (req, res) => {
+    const { base64, type } = req.body;
+    let dir = `../python/images/${type}`;
+
+    if (!base64 || !fs.existsSync(dir)) {
+      return res.status(400).json('bad request');
+    }
+    const fileName = nanoid();
+    var filepath = base64Img.imgSync(base64, dir, fileName);
+    // let pathArr = filepath.split("/");
+    let processed_path = `../python/processed/${type}/${fileName + '.txt'}`;
+
+    console.log(processed_path);
+    // fs.rename(filePath, processed_path, function (err) {
+    //   if (err) throw err
+    //   console.log('Successfully renamed - AKA moved!')
+    // })
+
+    sleepUntil(() => fs.existsSync(processed_path), 10000)
+      .then(async () => {
+        console.log("found result!");
+        const result = syncReadFile(processed_path)
+
+        const id = Number(result[0].split(",", 1));
+        if (type == 'store') {
+          const store = storeLabel[id];
+          console.log(store.storeId);
+
+          res.status(200).json({
+            success: true,
+            result: store.storeId,
+          });
+        } else if (type == 'product') {
+          const label = productLabel[id];
+          console.log(label);
+          const results = await searchProduct(label, sequelizeObjects)
+
+          res.status(200).json({
+            success: true,
+            result: results,
+          });
+        }
       })
       .catch(() => {
         console.log("require time out!");
-        res.status(408);
+        res.status(408).json({ message: 'require time out' });
       });
 
-    // var _TIMEOUT = 1000; // waitfor test rate [msec]
-    // var bBusy = true; // Busy flag (will be changed somewhere else in the code)
-    // // Test a flag
-    // function _isBusy() {
-    //   return bBusy;
-    // }
-    // // Wait until idle (busy must be false)
-    // waitfor(_isBusy, false, _TIMEOUT, 0, "play->busy false", function () {
-    //   console.log("the wait is over!");
-    //   res.status(200).json({
-    //     success: true,
-    //     fileName: `${name}`,
-    //   });
-    // });
-    // setTimeout(function () {
-    //   bBusy = false;
-    //   // console.log("the wait is over!");
-    //   // res.status(200).json({
-    //   //   success: true,
-    //   //   fileName: `${name}`,
-    //   // });
-    // }, 3000);
   });
 }
 

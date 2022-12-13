@@ -3,19 +3,19 @@
     "products": [
         {
             "productName": "HandCream",
-            "imagePath": "../assets/product/0007.jpg",
+            "imagePath": "https://firebasestorage.googleapis.com/v0/b/sahakit-project.appspot.com/o/product%2FHandCream.jpeg?alt=media&token=73444932-2be1-417b-b1f1-1a88cec5ef93",
             "imageName": "0007",
             "price": 50
         },
         {
             "productName": "Pimple Blackhead Remover",
-            "imagePath": "../assets/product/0008.jpg",
+            "imagePath": "https://firebasestorage.googleapis.com/v0/b/sahakit-project.appspot.com/o/product%2FPimpleBlackheadRemover.jpeg?alt=media&token=f82a6715-97f4-4da9-b6cf-4ff15ed43e2d",
             "imageName": "0008",
             "price": 30
         },
         {
             "productName": "Mask",
-            "imagePath": "../assets/product/0009.jpg",
+            "imagePath": "https://firebasestorage.googleapis.com/v0/b/sahakit-project.appspot.com/o/product%2FMask.jpg?alt=media&token=1159c517-c4a7-405c-8aad-3dd5e162373e",
             "imageName": "0009",
             "price": 69
         }

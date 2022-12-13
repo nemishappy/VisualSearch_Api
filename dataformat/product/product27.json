@@ -3,19 +3,19 @@
     "products": [
         {
             "productName": "iPhone 14 Pro Max",
-            "imagePath": "../assets/product/0079.jpg",
+            "imagePath": "https://firebasestorage.googleapis.com/v0/b/sahakit-project.appspot.com/o/product%2FiPhone_14ProMax_3.jpg?alt=media&token=37f982ec-512b-430e-b69d-7a8da7ab8371",
             "imageName": "0079",
             "price": 44900
         },
         {
             "productName": "Samsung Z Fold 4",
-            "imagePath": "../assets/product/0080.jpg",
+            "imagePath": "https://firebasestorage.googleapis.com/v0/b/sahakit-project.appspot.com/o/product%2FZFold4.webp?alt=media&token=f64f6662-4604-4075-b698-65b1fe439871",
             "imageName": "0080",
             "price": 59899
         },
         {
             "productName": "Sandisk Flash Drive",
-            "imagePath": "../assets/product/0081.jpg",
+            "imagePath": "https://firebasestorage.googleapis.com/v0/b/sahakit-project.appspot.com/o/product%2FSandisk_FlashDrive_2.webp?alt=media&token=9878821e-514e-40e9-adac-6fd26012c361",
             "imageName": "0081",
             "price": 280
         }

@@ -3,13 +3,13 @@
     "products": [
         {
             "productName": "Asus Notebook",
-            "imagePath": "../assets/product/0016.jpg",
+            "imagePath": "https://firebasestorage.googleapis.com/v0/b/sahakit-project.appspot.com/o/product%2FAsus_Notebook.jpg?alt=media&token=5d4fe508-ef27-43e3-98bf-bb3ca06b7e07",
             "imageName": "0016",
             "price": 21799
         },
         {
             "productName": "Monitor",
-            "imagePath": "../assets/product/0017.jpg",
+            "imagePath": "https://firebasestorage.googleapis.com/v0/b/sahakit-project.appspot.com/o/product%2FMonitor.webp?alt=media&token=5680ec5f-e01c-49b1-a87c-ca6418d90799",
             "imageName": "0017",
             "price": 5999,
             "promotion": {
@@ -21,7 +21,7 @@
         },
         {
             "productName": "Powerbank",
-            "imagePath": "../assets/product/0018.jpg",
+            "imagePath": "https://firebasestorage.googleapis.com/v0/b/sahakit-project.appspot.com/o/product%2FPowerbank.webp?alt=media&token=4896370c-402e-418b-bd30-dcd27f3f4f37",
             "imageName": "0018",
             "price": 399
         }

@@ -3,19 +3,19 @@
     "products": [
         {
             "productName": "Sandisk Flash Drive",
-            "imagePath": "../assets/product/0064.jpg",
+            "imagePath": "https://firebasestorage.googleapis.com/v0/b/sahakit-project.appspot.com/o/product%2FSandisk_FlashDrive.jpg?alt=media&token=bf403990-c9bb-4d89-b0b0-e23b301fd3b1",
             "imageName": "0064",
             "price": 150
         },
         {
             "productName": "Mouse",
-            "imagePath": "../assets/product/0065.jpg",
+            "imagePath": "https://firebasestorage.googleapis.com/v0/b/sahakit-project.appspot.com/o/product%2FMouse.webp?alt=media&token=690b1b70-d164-4abd-9c83-7d820ff2d6bb",
             "imageName": "0065",
             "price": 283
         },
         {
             "productName": "Lan Cable",
-            "imagePath": "../assets/product/0066.jpg",
+            "imagePath": "https://firebasestorage.googleapis.com/v0/b/sahakit-project.appspot.com/o/product%2FLan_Cable.webp?alt=media&token=293a91a9-4c1f-49a2-99ec-35979e5e7541",
             "imageName": "0066",
             "price": 152
         }

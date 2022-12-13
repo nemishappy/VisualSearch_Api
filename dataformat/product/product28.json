@@ -1,21 +1,21 @@
 {
-    "storeId": 27,
+    "storeId": 28,
     "products": [
         {
             "productName": "Lan Cable",
-            "imagePath": "../assets/product/0082.jpg",
+            "imagePath": "https://firebasestorage.googleapis.com/v0/b/sahakit-project.appspot.com/o/product%2F100-Lan_Cable.jpg?alt=media&token=fe4d1d28-042a-4379-8ac9-fc7b3ee175c1",
             "imageName": "0082",
             "price": 150
         },
         {
             "productName": "TPLink PocketWifi",
-            "imagePath": "../assets/product/0083.jpg",
+            "imagePath": "https://firebasestorage.googleapis.com/v0/b/sahakit-project.appspot.com/o/product%2FTPLink_PocketWifi_2.jpg?alt=media&token=42901d7f-bf2d-4357-a7e9-016889134ba1",
             "imageName": "0083",
             "price": 1890
         },
         {
             "productName": "TPLink RangeExtender",
-            "imagePath": "../assets/product/0084.jpg",
+            "imagePath": "https://firebasestorage.googleapis.com/v0/b/sahakit-project.appspot.com/o/product%2FTPLink_RangeExtender_2.jpg?alt=media&token=53ec2ad4-8431-4030-a9ed-da8953b944f9",
             "imageName": "0084",
             "price": 1230
         }

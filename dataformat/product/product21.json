@@ -3,19 +3,19 @@
     "products": [
         {
             "productName": "Windows 10 Pro",
-            "imagePath": "../assets/product/0061.jpg",
+            "imagePath": "https://firebasestorage.googleapis.com/v0/b/sahakit-project.appspot.com/o/product%2FWindows10.jpg?alt=media&token=31de9de8-6080-4f71-b0bf-86d02c65f8d0",
             "imageName": "0061",
             "price": 1790
         },
         {
             "productName": "Microsoft office 365",
-            "imagePath": "../assets/product/0062.jpg",
+            "imagePath": "https://firebasestorage.googleapis.com/v0/b/sahakit-project.appspot.com/o/product%2Foffice.jpg?alt=media&token=87765e44-cb55-477e-b38f-8dab7cc5bb2c",
             "imageName": "0062",
             "price": 1350
         },
         {
             "productName": "RAM DDR3",
-            "imagePath": "../assets/product/0063.jpg",
+            "imagePath": "https://firebasestorage.googleapis.com/v0/b/sahakit-project.appspot.com/o/product%2FRAM_DDR3.webp?alt=media&token=543ca672-4076-4889-b4d0-483ed74683d3",
             "imageName": "0063",
             "price": 1300
         }

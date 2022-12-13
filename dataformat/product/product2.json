@@ -3,19 +3,19 @@
     "products": [
         {
             "productName": "Scissors",
-            "imagePath": "../assets/product/0004.jpg",
+            "imagePath": "https://firebasestorage.googleapis.com/v0/b/sahakit-project.appspot.com/o/product%2FScissors.jpg?alt=media&token=b63c5bf8-6a55-49dc-b727-96f69dad8d6c",
             "imageName": "0004",
             "price": 20
         },
         {
-            "productName": "FoodContainer",
-            "imagePath": "../assets/product/0005.jpg",
+            "productName": "Food Container",
+            "imagePath": "https://firebasestorage.googleapis.com/v0/b/sahakit-project.appspot.com/o/product%2FFoodContainer.jpeg?alt=media&token=bbb15fac-2e1a-4150-961d-c6fdeace9026",
             "imageName": "0005",
             "price": 30
         },
         {
             "productName": "Bottle",
-            "imagePath": "../assets/product/0006.jpg",
+            "imagePath": "https://firebasestorage.googleapis.com/v0/b/sahakit-project.appspot.com/o/product%2FBottle.jpeg?alt=media&token=fd518690-2dcd-47ca-9e69-13eeeaf2d6e8",
             "imageName": "0006",
             "price": 17
         }

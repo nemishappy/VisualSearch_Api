@@ -3,7 +3,7 @@
     "products": [
         {
             "productName": "Sony CCTV",
-            "imagePath": "../assets/product/0043.jpg",
+            "imagePath": "https://firebasestorage.googleapis.com/v0/b/sahakit-project.appspot.com/o/product%2FSonyCCTV.jpg?alt=media&token=d0861863-7a5e-4e56-be04-b10aa0f02dba",
             "imageName": "0043",
             "price": 1799,
             "promotion": {
@@ -15,13 +15,13 @@
         },
         {
             "productName": "DaHua CCTV",
-            "imagePath": "../assets/product/0044.jpg",
+            "imagePath": "https://firebasestorage.googleapis.com/v0/b/sahakit-project.appspot.com/o/product%2FDaiHuaCCTV.webp?alt=media&token=3222c714-9a51-4cc0-8abd-be3116a6c420",
             "imageName": "0044",
             "price": 490
         },
         {
             "productName": "HiView CCTV",
-            "imagePath": "../assets/product/0045.jpg",
+            "imagePath": "https://firebasestorage.googleapis.com/v0/b/sahakit-project.appspot.com/o/product%2FHiViewCCTV.jpeg?alt=media&token=31983ed5-ee56-414e-b43e-54e4c7428c9a",
             "imageName": "0045",
             "price": 1200
         }

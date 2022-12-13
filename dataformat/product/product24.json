@@ -3,19 +3,19 @@
     "products": [
         {
             "productName": "Massage Twisted Ankle",
-            "imagePath": "../assets/product/0070.jpg",
+            "imagePath": "https://firebasestorage.googleapis.com/v0/b/sahakit-project.appspot.com/o/product%2FMassageTwistedAnkle.jpg?alt=media&token=e4c45758-63a4-4a2a-b1e4-3ea07d211665",
             "imageName": "0070",
             "price": 200
         },
         {
             "productName": "Massage Knee Ankle",
-            "imagePath": "../assets/product/0071.jpg",
+            "imagePath": "https://firebasestorage.googleapis.com/v0/b/sahakit-project.appspot.com/o/product%2FMassageKneeAnkle.jpg?alt=media&token=63334e01-9ca5-4db1-8ba3-c45a31e38bb6",
             "imageName": "0071",
             "price": 300
         },
         {
             "productName": "Massage Elbow",
-            "imagePath": "../assets/product/0072.jpg",
+            "imagePath": "https://firebasestorage.googleapis.com/v0/b/sahakit-project.appspot.com/o/product%2Felbow.jpg?alt=media&token=f102b081-1b90-4d2d-b451-e9432e7bb270",
             "imageName": "0066",
             "price": 300
         }

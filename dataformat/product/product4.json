@@ -3,19 +3,19 @@
     "products": [
         {
             "productName": "Book Bank",
-            "imagePath": "../assets/product/0010.jpg",
+            "imagePath": "https://firebasestorage.googleapis.com/v0/b/sahakit-project.appspot.com/o/product%2FBookBank.png?alt=media&token=6d5384bc-3176-40eb-8e42-17d3091015ad",
             "imageName": "0010",
             "price": 100
         },
         {
             "productName": "Bank Note",
-            "imagePath": "../assets/product/0011.jpg",
+            "imagePath": "https://firebasestorage.googleapis.com/v0/b/sahakit-project.appspot.com/o/product%2FBankNote.jpg?alt=media&token=3921b907-7802-4ca0-948c-fc28bf82b659g",
             "imageName": "0011",
-            "price": 0
+            "price": 100
         },
         {
             "productName": "Coins",
-            "imagePath": "../assets/product/0012.jpg",
+            "imagePath": "https://firebasestorage.googleapis.com/v0/b/sahakit-project.appspot.com/o/product%2FCoins.jpg?alt=media&token=49369fe7-b902-45ec-8e2b-e908f6efc2c2",
             "imageName": "0012",
             "price": 10
         }

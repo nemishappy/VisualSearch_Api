@@ -3,7 +3,7 @@
     "products": [
         {
             "productName": "TPLink PocketWifi",
-            "imagePath": "../assets/product/0019.jpg",
+            "imagePath": "https://firebasestorage.googleapis.com/v0/b/sahakit-project.appspot.com/o/product%2FTPLink_PocketWifi.jpeg?alt=media&token=a13b11d8-4db2-468b-a5b2-0e2c747b4c80",
             "imageName": "0019",
             "price": 1890,
             "promotion": {
@@ -15,13 +15,13 @@
         },
         {
             "productName": "TPLink RangeExtender",
-            "imagePath": "../assets/product/0020.jpg",
+            "imagePath": "https://firebasestorage.googleapis.com/v0/b/sahakit-project.appspot.com/o/product%2FTPLink_RangeExtender.webp?alt=media&token=e8849cea-4324-4a79-815c-23f50659d3d5",
             "imageName": "0020",
             "price": 1230
         },
         {
             "productName": "Monitor",
-            "imagePath": "../assets/product/0021.jpg",
+            "imagePath": "https://firebasestorage.googleapis.com/v0/b/sahakit-project.appspot.com/o/product%2FMonitorJIB.webp?alt=media&token=cd59172c-cc5a-49b2-9dc0-07a2eaf11f3b",
             "imageName": "0021",
             "price": 3999
         }

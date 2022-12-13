@@ -3,19 +3,19 @@
     "products": [
         {
             "productName": "Power Cord",
-            "imagePath": "../assets/product/0040.jpg",
+            "imagePath": "https://firebasestorage.googleapis.com/v0/b/sahakit-project.appspot.com/o/product%2FPowerCod.png?alt=media&token=afcbb3ff-a2e0-464a-bdcc-cbfc0a97eb80",
             "imageName": "0040",
             "price": 125
         },
         {
             "productName": "Type C Cable",
-            "imagePath": "../assets/product/0041.jpg",
+            "imagePath": "https://firebasestorage.googleapis.com/v0/b/sahakit-project.appspot.com/o/product%2FTypeC_Cable_1.jpeg?alt=media&token=ee9ab1f3-55e2-4d5a-9fb6-77798f174efe",
             "imageName": "0041",
             "price": 199
         },
         {
             "productName": "Lightning Cable",
-            "imagePath": "../assets/product/0042.jpg",
+            "imagePath": "https://firebasestorage.googleapis.com/v0/b/sahakit-project.appspot.com/o/product%2FLightning_Cable.jpeg?alt=media&token=2ca42d87-524c-4eb2-b0a7-e68657832696",
             "imageName": "0042",
             "price": 70
         }

@@ -3,19 +3,19 @@
     "products": [
         {
             "productName": "Doll",
-            "imagePath": "../assets/product/0067.jpg",
+            "imagePath": "https://firebasestorage.googleapis.com/v0/b/sahakit-project.appspot.com/o/product%2FDoll.jpg?alt=media&token=6b44e602-6d17-4790-b0aa-9f4d76026109",
             "imageName": "0067",
             "price": 150
         },
         {
             "productName": "Game Machine",
-            "imagePath": "../assets/product/0068.jpg",
+            "imagePath": "https://firebasestorage.googleapis.com/v0/b/sahakit-project.appspot.com/o/product%2FDollmachine.jpg?alt=media&token=9d9cfd1a-f95b-4bbd-aa46-e4bd79b4da9d",
             "imageName": "0068",
             "price": 10
         },
         {
             "productName": "Coin Operated Games",
-            "imagePath": "../assets/product/0069.jpg",
+            "imagePath": "https://firebasestorage.googleapis.com/v0/b/sahakit-project.appspot.com/o/product%2FGameMachine.jpeg?alt=media&token=66e86085-193c-436e-a134-13f441cce823",
             "imageName": "0066",
             "price": 10
         }

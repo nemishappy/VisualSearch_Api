@@ -3,19 +3,19 @@
     "products": [
         {
             "productName": "Iced Coffee",
-            "imagePath": "../assets/product/0049.jpg",
+            "imagePath": "https://firebasestorage.googleapis.com/v0/b/sahakit-project.appspot.com/o/product%2Ficed_mezzo_1.jpg?alt=media&token=5dddd7fc-a82f-41c7-8143-f68081e0d815",
             "imageName": "0049",
             "price": 50
         },
         {
             "productName": "Cake",
-            "imagePath": "../assets/product/0050.jpg",
+            "imagePath": "https://firebasestorage.googleapis.com/v0/b/sahakit-project.appspot.com/o/product%2Fcake.jpg?alt=media&token=7eff9fb4-bc9d-4d68-a56c-ca42cb224a31",
             "imageName": "0050",
             "price": 69
         },
         {
             "productName": "Bread",
-            "imagePath": "../assets/product/0051.jpg",
+            "imagePath": "https://firebasestorage.googleapis.com/v0/b/sahakit-project.appspot.com/o/product%2Fbread.jpg?alt=media&token=9e0c441d-3316-4c7b-8394-b5c2f171f4ee",
             "imageName": "0051",
             "price": 20
         }

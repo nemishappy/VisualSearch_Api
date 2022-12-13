@@ -3,7 +3,7 @@
     "products": [
         {
             "productName": "Cutter",
-            "imagePath": "../assets/product/0001.jpg",
+            "imagePath": "https://firebasestorage.googleapis.com/v0/b/sahakit-project.appspot.com/o/product%2Fcutter.jpg?alt=media&token=513be474-be02-4179-a6a0-cc248911fb79",
             "imageName": "0001",
             "price": 20,
             "promotion": {
@@ -15,13 +15,13 @@
         },
         {
             "productName": "Tissue",
-            "imagePath": "../assets/product/0002.jpg",
+            "imagePath": "https://firebasestorage.googleapis.com/v0/b/sahakit-project.appspot.com/o/product%2FTissue.jpg?alt=media&token=c9a3c49d-450c-403b-8bb9-b2fd028ee370",
             "imageName": "0002",
             "price": 10
         },
         {
             "productName": "Fan",
-            "imagePath": "../assets/product/0003.jpg",
+            "imagePath": "https://firebasestorage.googleapis.com/v0/b/sahakit-project.appspot.com/o/product%2FFan.jpg?alt=media&token=25922199-b584-4b6d-a470-6fb7ef41dcc9",
             "imageName": "0003",
             "price": 569,
             "promotion": {
