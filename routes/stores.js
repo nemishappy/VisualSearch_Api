@@ -1,5 +1,4 @@
 "use strict";
-const imageUtils = require("../module/imageUtils");
 const path = require("path");
 const dotEnv = require("dotenv");
 dotEnv.config();

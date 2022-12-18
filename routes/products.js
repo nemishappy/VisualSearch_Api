@@ -1,8 +1,7 @@
 "use strict";
-const imageUtils = require("../module/imageUtils");
+const utils = require("../module/utils");
 const path = require("path");
 const dotEnv = require("dotenv");
-const { Op } = require('sequelize');
 dotEnv.config();
 
 function _validProduct(product) {
@@ -146,9 +145,12 @@ async function Products(router, sequelizeObjects) {
     // Check prodcut id
     if (id) {
       // update prodcut
-      await sequelizeObjects.Product.update({
-        productName: data.productName,
-      }, { where: { id: id } })
+      await sequelizeObjects.Product.update(
+        {
+          productName: data.productName,
+        },
+        { where: { id: id } }
+      )
         .then(function (product) {
           insertComplete = true;
           console.log("update records id: ", product.id);
@@ -180,7 +182,7 @@ async function Products(router, sequelizeObjects) {
     let outputs = [];
     // Find all products
     const products = await sequelizeObjects.Product.findAll({
-      include: sequelizeObjects.PromoProduct
+      include: sequelizeObjects.PromoProduct,
     });
     console.log(
       products.every((prod) => prod instanceof sequelizeObjects.Product)
@@ -220,30 +222,23 @@ async function Products(router, sequelizeObjects) {
       res.status(200).json(product);
     }
   });
+
   router.get("/product/search", async (req, res) => {
     // Find product by string
-    const Sequelize = sequelizeObjects.sequelize;
     const query = req.query.query;
-    let lookupValue = query.toLowerCase();
-    const product = await sequelizeObjects.Product.findAll({
-      limit: 10,
-      where: {
-        productName: Sequelize.where(Sequelize.fn('LOWER', Sequelize.fn('REPLACE', Sequelize.col('productName'), ' ', '')), 'LIKE', '%' + lookupValue + '%')
-      },
-      include: [sequelizeObjects.PromoProduct, { model: sequelizeObjects.Store, attributes: ['storeName'] }],
-      order: [
-        ['price', 'ASC']
-      ]
-    }).then(function (results) {
+    const results = utils.searchProduct(query, sequelizeObjects);
+    if ((await results).length) {
       return res.status(200).json({
-        msg: 'search results',
-        results: results
+        msg: "search results",
+        results: results,
       });
-    }).catch(function (error) {
-      console.log(error);
-    });
+    } else {
+      return res.status(404).json({
+        msg: "not found",
+        results: results,
+      });
+    }
   });
-
 }
 
 exports.Products = Products;

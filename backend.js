@@ -61,7 +61,7 @@ initDb.initDatabase().then(async () => {
   // -------------------------------------------------------------------------------------------------------------------
   // Register routes
 
-  require("./routes/testdir").TestAPI(app, sequelizeObjects);
+  require("./routes/detection").Detection(app, sequelizeObjects);
   require("./routes/stores").Stores(app, sequelizeObjects);
   require("./routes/products").Products(app, sequelizeObjects);
 
