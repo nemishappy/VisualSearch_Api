@@ -135,48 +135,6 @@ async function Products(router, sequelizeObjects) {
     }
   });
 
-  // update prodcut by id
-  router.patch("/product/update", async (req, res) => {
-    let insertComplete = false;
-    const data = req.body;
-    const id = req.query.id;
-    console.log(data);
-
-    // Check prodcut id
-    if (id) {
-      // update prodcut
-      await sequelizeObjects.Product.update(
-        {
-          productName: data.productName,
-        },
-        { where: { id: id } }
-      )
-        .then(function (product) {
-          insertComplete = true;
-          console.log("update records id: ", product.id);
-        })
-        .catch(function (err) {
-          // handle error
-          console.log(err.name);
-          insertComplete = false;
-          return;
-        });
-    }
-
-    // Response
-    if (insertComplete) {
-      res.status(200).json({
-        success: true,
-        message: `product ${id} has been updated.`,
-      });
-    } else {
-      res.status(400).json({
-        success: false,
-        message: `Fail to update to the database.`,
-      });
-    }
-  });
-
   // Queries all product
   router.get("/product/getall", async (req, res) => {
     let outputs = [];
@@ -207,7 +165,7 @@ async function Products(router, sequelizeObjects) {
   });
 
   // Queries product by id key
-  router.get("/product/get", async (req, res) => {
+  router.get("/product/get:id", async (req, res) => {
     let outputs = [];
     const id = req.query.id;
     // Find product by pk
@@ -223,11 +181,11 @@ async function Products(router, sequelizeObjects) {
     }
   });
 
-  router.get("/product/search", async (req, res) => {
+  router.get("/product/search:query", async (req, res) => {
     // Find product by string
     const query = req.query.query;
-    const results = utils.searchProduct(query, sequelizeObjects);
-    if ((await results).length) {
+    const results = await utils.searchProduct(query, sequelizeObjects);
+    if (results) {
       return res.status(200).json({
         msg: "search results",
         results: results,
@@ -236,6 +194,119 @@ async function Products(router, sequelizeObjects) {
       return res.status(404).json({
         msg: "not found",
         results: results,
+      });
+    }
+  });
+
+  // update prodcut by id
+  router.patch("/product/update:id", async (req, res) => {
+    let insertComplete = false;
+    const data = req.body;
+    const id = req.query.id;
+    console.log(data);
+
+    // Check prodcut id
+    if (id) {
+      // update prodcut
+      await sequelizeObjects.Product.update(
+        {
+          productName: data.productName,
+          price: data.price
+        },
+        { where: { id: id } }
+      )
+        .then(function (product) {
+          insertComplete = true;
+          console.log("update records id: ", product.id);
+        })
+        .catch(function (err) {
+          // handle error
+          console.log(err.name);
+          insertComplete = false;
+          return;
+        });
+    }
+
+    // Response
+    if (insertComplete) {
+      res.status(200).json({
+        success: true,
+        message: `product ${id} has been updated.`,
+      });
+    } else {
+      res.status(400).json({
+        success: false,
+        message: `Fail to update to the database.`,
+      });
+    }
+  });
+
+  // delete product data by id
+  router.delete("/product/delete:id", async (req, res) => {
+    let deleteComplete = false;
+    const id = req.query.id;
+
+    // Check product id
+    if (id) {
+      // delete data
+      await sequelizeObjects.Product.destroy({ where: { id: id } })
+        .then(function (product) {
+          deleteComplete = true;
+          console.log("delete records id: ", product.id);
+        })
+        .catch(function (err) {
+          // handle error
+          console.log(err.name);
+          deleteComplete = false;
+          return;
+        });
+    }
+
+    // Response
+    if (deleteComplete) {
+      res.status(200).json({
+        success: true,
+        message: `Product ${id} has been deleted from database.`,
+      });
+    } else {
+      res.status(400).json({
+        success: false,
+        message: `Fail to delete.`,
+      });
+    }
+  });
+
+  // delete promotion product data by id
+  router.delete("/product/promotion/delete:id", async (req, res) => {
+    let deleteComplete = false;
+    const id = req.query.id;
+
+    // Check store id
+    if (id) {
+      // delete data
+      await sequelizeObjects.PromoProduct.destroy({ where: { id: id } })
+        .then(function (promotion) {
+          deleteComplete = true;
+          console.log("delete records id: ", promotion.id);
+        })
+        .catch(function (err) {
+          // handle error
+          console.log(err.name);
+          deleteComplete = false;
+          return;
+        });
+    }
+
+    // Response
+    if (deleteComplete) {
+      res.status(200).json({
+        success: true,
+        message: `Promotion ${id} has been deleted from database.`,
+      });
+    } else {
+      res.status(400).json({
+        success: false,
+        message: `Fail to delete.`,
       });
     }
   });

@@ -105,7 +105,7 @@ exports.searchProduct = searchProduct;
  * Get store name by id
  * @param {int} id
  * @param {Object} sequelizeObjects
- * @return {Promise<Array>}
+ * @return {Object}
  */
 async function getStoreName(id, sequelizeObjects) {
   const store = await sequelizeObjects.Store.findByPk(id, {

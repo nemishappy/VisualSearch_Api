@@ -142,46 +142,6 @@ async function Stores(router, sequelizeObjects) {
     }
   });
 
-  // update data by id
-  router.patch("/store/update", async (req, res) => {
-    let insertComplete = false;
-    const data = req.body;
-    const id = req.query.id;
-    console.log(data);
-
-    // Check store id
-    if (id) {
-      // update data
-      await sequelizeObjects.Store.update({
-        imagePath: data.imagePath,
-        logoPath: data.logoPath,
-      }, { where: { id: id } })
-        .then(function (store) {
-          insertComplete = true;
-          console.log("update records id: ", store.id);
-        })
-        .catch(function (err) {
-          // handle error
-          console.log(err.name);
-          insertComplete = false;
-          return;
-        });
-    }
-
-    // Response
-    if (insertComplete) {
-      res.status(200).json({
-        success: true,
-        message: `Store ${id} has been updated to database.`,
-      });
-    } else {
-      res.status(400).json({
-        success: false,
-        message: `Fail to update to the database.`,
-      });
-    }
-  });
-
   // Queries all product
   router.get("/store/getall", async (req, res) => {
     let outputs = [];
@@ -211,18 +171,19 @@ async function Stores(router, sequelizeObjects) {
   });
 
   // Queries store by id key
-  router.get("/store/get", async (req, res) => {
+  router.get("/store/get:id", async (req, res) => {
     let outputs = [];
     const id = req.query.id;
     // Find store by pk
     const store = await sequelizeObjects.Store.findByPk(id, {
-      include: [sequelizeObjects.PromoStore, {
-        model: sequelizeObjects.Product,
-        include: sequelizeObjects.PromoProduct
-      }],
-      order: [
-        [sequelizeObjects.Product, 'price', 'ASC']
-      ]
+      include: [
+        sequelizeObjects.PromoStore,
+        {
+          model: sequelizeObjects.Product,
+          include: sequelizeObjects.PromoProduct,
+        },
+      ],
+      order: [[sequelizeObjects.Product, "price", "ASC"]],
     });
     if (store === null) {
       console.log("Not found!");
@@ -232,25 +193,145 @@ async function Stores(router, sequelizeObjects) {
       res.status(200).json(store);
     }
   });
-  router.get("/store/search", async (req, res) => {
+  // Search store
+  router.get("/store/search:query", async (req, res) => {
     // Find product by string
     const Sequelize = sequelizeObjects.sequelize;
     const query = req.query.query;
     let lookupValue = query.toLowerCase();
     const store = await sequelizeObjects.Store.findAll({
-      attributes: ['id', 'storeName', 'logoPath'],
+      attributes: ["id", "storeName", "logoPath"],
       limit: 10,
       where: {
-        productName: Sequelize.where(Sequelize.fn('LOWER', Sequelize.col('storeName')), 'LIKE', '%' + lookupValue + '%')
-      }
-    }).then(function (results) {
-      return res.status(200).json({
-        msg: 'search results',
-        results: results
+        productName: Sequelize.where(
+          Sequelize.fn("LOWER", Sequelize.col("storeName")),
+          "LIKE",
+          "%" + lookupValue + "%"
+        ),
+      },
+    })
+      .then(function (results) {
+        return res.status(200).json({
+          msg: "search results",
+          results: results,
+        });
+      })
+      .catch(function (error) {
+        console.log(error);
       });
-    }).catch(function (error) {
-      console.log(error);
-    });
+  });
+
+  // update data by id
+  router.patch("/store/update:id", async (req, res) => {
+    let insertComplete = false;
+    const data = req.body;
+    const id = req.query.id;
+    console.log(data);
+
+    // Check store id
+    if (id) {
+      // update data
+      await sequelizeObjects.Store.update(
+        {
+          imagePath: data.imagePath,
+          logoPath: data.logoPath,
+        },
+        { where: { id: id } }
+      )
+        .then(function (store) {
+          insertComplete = true;
+          console.log("update records id: ", store.id);
+        })
+        .catch(function (err) {
+          // handle error
+          console.log(err.name);
+          insertComplete = false;
+          return;
+        });
+    }
+
+    // Response
+    if (insertComplete) {
+      res.status(200).json({
+        success: true,
+        message: `Store ${id} has been updated to database.`,
+      });
+    } else {
+      res.status(400).json({
+        success: false,
+        message: `Fail to update to the database.`,
+      });
+    }
+  });
+
+  // delete store data by id
+  router.delete("/store/delete:id", async (req, res) => {
+    let deleteComplete = false;
+    const id = req.query.id;
+
+    // Check store id
+    if (id) {
+      // delete data
+      await sequelizeObjects.Store.destroy({ where: { id: id } })
+        .then(function (store) {
+          deleteComplete = true;
+          console.log("delete records id: ", store.id);
+        })
+        .catch(function (err) {
+          // handle error
+          console.log(err.name);
+          deleteComplete = false;
+          return;
+        });
+    }
+
+    // Response
+    if (deleteComplete) {
+      res.status(200).json({
+        success: true,
+        message: `Store ${id} has been deleted from database.`,
+      });
+    } else {
+      res.status(400).json({
+        success: false,
+        message: `Fail to delete.`,
+      });
+    }
+  });
+
+  // delete promotion store data by id
+  router.delete("/store/promotion/delete:id", async (req, res) => {
+    let deleteComplete = false;
+    const id = req.query.id;
+
+    // Check store id
+    if (id) {
+      // delete data
+      await sequelizeObjects.PromoStore.destroy({ where: { id: id } })
+        .then(function (promotion) {
+          deleteComplete = true;
+          console.log("delete records id: ", promotion.id);
+        })
+        .catch(function (err) {
+          // handle error
+          console.log(err.name);
+          deleteComplete = false;
+          return;
+        });
+    }
+
+    // Response
+    if (deleteComplete) {
+      res.status(200).json({
+        success: true,
+        message: `Promotion ${id} has been deleted from database.`,
+      });
+    } else {
+      res.status(400).json({
+        success: false,
+        message: `Fail to delete.`,
+      });
+    }
   });
 }
 
